@@ -2,6 +2,8 @@ from Plateau import *
 from Position import *
 
 class Rover:
+    instructions = ""
+    
     def __init__(self, name, initial_X, initial_Y, initial_direction, plateau):
         Position.checkValidDirection(self, initial_direction)
 
