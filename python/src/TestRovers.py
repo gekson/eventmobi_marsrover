@@ -70,7 +70,6 @@ class TestRovers(unittest.TestCase):
         
         self.assertEqual(rover.position.coords, (1, 3))
         self.assertEqual(rover.direction, "N")
-        #print('{0}:{1} {2} {3}'.format(rover.getName(), rover.getPosition()[0], rover.getPosition()[1], rover.getDirection()))
         
     def testInstructionsTwoRovers(self):
         #Plateau:5 5

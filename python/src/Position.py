@@ -19,9 +19,6 @@ class Position:
             raise "Invalid Direction Error. 'N', 'E', 'S', 'W'"
     
     def move(self, direction):
-        #print("MOVE******directions[0]",Position.valid_directions[0], "**************")
-        #print("******",self.coords[0], "**************")
-        #print("******",self.coords[1], "**************")
         Position.checkValidDirection(self, direction)
         
         #COORDINATES - N E S W
@@ -35,8 +32,6 @@ class Position:
         return Position.getPosition(self, new_pos[0], new_pos[1])
 
     def getPosition(self, x, y):
-        #print("*****X=",x, " Y=",y, "*************")
-        #print("******",self.plateau.grid[0], " ",self.plateau.grid[1], "**************")
         if (x < 0 or y < 0) or (x > self.plateau.grid[0] or y > self.plateau.grid[1]):
             raise "Invalid Coordinate " 
         return Position(x, y, self.plateau)
